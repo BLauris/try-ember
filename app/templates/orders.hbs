@@ -1,1 +1,7 @@
-Hello from orders
+{{#each model as |order|}}
+  {{#link-to "orders.order" order}}
+    Order {{ order.id }} from {{ order.name }}<br>
+  {{/link-to}}
+{{/each}}
+
+{{outlet}}
